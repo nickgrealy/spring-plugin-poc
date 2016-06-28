@@ -42,11 +42,7 @@ public class TestAvailableServices {
 
     @Test
     public void testUrls() {
-        String response1 = restTemplate.getForObject(localServer + "/application", String.class);
-//        String response2 = restTemplate.getForObject(localServer + "/spring", String.class);
-        String response3 = restTemplate.getForObject(localServer + "/thirdpartyplugin", String.class);
-        assertThat(response1, is("ok"));
-//        assertThat(response2, is("ok"));
-        assertThat(response3, is("ok"));
+        String response = restTemplate.getForObject(localServer + "/thirdpartyplugin", String.class);
+        assertThat(response, is("excellent!"));
     }
 }
